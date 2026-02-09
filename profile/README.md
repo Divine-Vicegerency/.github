@@ -1,82 +1,117 @@
-# 👋 Selamat Datang di Tim Aplikasi Diskominfo SP Kota Surakarta
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="256px" height="256px" viewBox="0 0 256 256">
+    <style>
+        @media (prefers-reduced-motion: no-preference) {
+            .twinkle {
+                animation: twinkle 3s ease-in infinite;
+            }
 
-<div align="center">
-  
-### 🏛️ Dinas Komunikasi, Informatika, Statistik dan Persandian
-### Kota Surakarta
+            .twinkle--1 {
+                animation-delay: .5s;
+                transform-origin: 84px 46px;
+            }
 
-_Membangun Ekosistem Digital yang Inovatif untuk Pelayanan Publik yang Lebih Baik_
+            .twinkle--2 {
+                animation-delay: 1.5s;
+                transform-origin: 214px 170px;
+            }
 
----
+            .twinkle--3 {
+                animation-delay: 3s;
+                transform-origin: 131.5px 29px;
+            }
 
-[![Website](https://img.shields.io/badge/Website-Surakarta.go.id-blue?style=flat-square)](https://surakarta.go.id)
-[![Email](https://img.shields.io/badge/Email-diskominfo%40surakarta.go.id-red?style=flat-square)](mailto:diskominfo@surakarta.go.id)
+            #spaceship-and-flame {
+                animation: moveShip 4s linear infinite;
+                transform-origin: 75px 75px;
+            }
 
-</div>
+            @keyframes twinkle {
+                0% { transform: scale(1) }
+                20% { transform: scale(1.5) }
+                60%, 100% { transform: scale(1) }
+            }
 
-## 🎯 Tentang Kami
+            @keyframes moveShip {
+                0% { transform: translate(0, 0) rotate(0) }
+                25% { transform: translate(3px, 3px) rotate(1deg) }
+                50% { transform: translate(3px, -3px) rotate(-1deg) }
+                75% { transform: translate(-3px, -3px) rotate(0) }
+                100% { transform: translate(0, 0) rotate(0) }
+            }
+        }
+    </style>
+    <defs>
+        <linearGradient id="gradientWings" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="#f80"/>
+            <stop offset=".3" stop-color="#f80"/>
+            <stop offset="1" stop-color="#D94C00"/>
+        </linearGradient>
+        <linearGradient id="gradientWindow" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0CF"/>
+            <stop offset=".4" stop-color="#fff"/>
+            <stop offset=".8" stop-color="#0CF"/>
+        </linearGradient>
+        <linearGradient id="gradientMetal" x1="0" y1="0" x2="1" y2="1">
+            <stop offset=".2" stop-color="#888"/>
+            <stop offset=".4" stop-color="#eee"/>
+            <stop offset=".6" stop-color="#666"/>
+        </linearGradient>
+        <radialGradient id="gradientFlameInner" cx="0.65" cy="0.35" r="1.25">
+            <stop offset="0.25" stop-color="#fff"/>
+            <stop offset="1" stop-color="#ffec50"/>
+        </radialGradient>
+        <radialGradient id="gradientFlameOuter" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#ffec50"/>
+            <stop offset="1" stop-color="#ffbf36"/>
+        </radialGradient>
+        <filter id="dropShadow">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>
+            <feOffset dx="4" dy="2" result="offsetblur"/>
+            <feFlood flood-color="#222" flood-opacity="0.5"/>
+            <feComposite in2="offsetblur" operator="in"/>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <filter id="flame">
+            <feTurbulence id="freq" type="turbulence" baseFrequency="0.2" numOctaves="2" result="turbulence"/>
+            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="10" xChannelSelector="G" yChannelSelector="B"/>
+        </filter>
+        <animate href="#freq" attributeName="baseFrequency" values="0.2; 0.12; 0.2" repeatCount="indefinite" keyTimes="0; 0.5; 1" dur="15s"/>
+        <filter id="insetShadow">
+            <feGaussianBlur stdDeviation="4" />
+            <feOffset dx="-2" dy="-10"/>
+            <feComposite operator="in" in2="SourceGraphic"/>
+        </filter>
+        <path id="hull" d="M224 30c-25.9-3.8-60.6 6.5-91.9 29.7 -33.6 24.9-54.2 57.8-55.9 84.8l33.3 33.3c27-1.6 59.9-22.2 84.8-55.9C217.4 90.6 227.7 55.9 224 30z"/>
+    </defs>
+    <circle id="logo-border" fill="#FFBC00" cx="128" cy="128" r="128"/>
+    <circle id="logo-background" fill="#00002e" cx="128" cy="128" r="120"/>
+    <circle class="star-small" fill="#FFFFFF" cx="109.5" cy="51.5" r="2"/>
+    <circle class="star-small" fill="#FFFFFF" cx="236" cy="120.5" r="2"/>
+    <circle class="star-small" fill="#FFFFFF" cx="184.5" cy="218" r="2"/>
+    <circle class="star-small" fill="#FFFFFF" cx="210" cy="145.999" r="2"/>
+    <circle class="star-small" fill="#FFFFFF" cx="100.167" cy="219.166" r="2"/>
+    <circle class="star-small" fill="#FFFFFF" cx="30.5" cy="155.166" r="2"/>
+    <circle class="star-small" fill="#FFFFFF" cx="28.5" cy="78.833" r="2"/>
+    <path class="twinkle twinkle--1" fill="#fff" d="M84.5 42.5c3.9 0 12.7-9.1 12.7-9.1s-9.1 8.8-9.1 12.7 9.1 12.7 9.1 12.7 -8.8-9.1-12.7-9.1S71.8 58.8 71.8 58.8s9.1-8.8 9.1-12.7 -9.1-12.7-9.1-12.7S80.6 42.5 84.5 42.5z"/>
+    <path class="twinkle twinkle--2" fill="#fff" d="M213.8 166.3c3.9 0 12.7-9.1 12.7-9.1s-9.1 8.8-9.1 12.7S226.5 182.5 226.5 182.5s-8.8-9.1-12.7-9.1 -12.7 9.1-12.7 9.1 9.1-8.8 9.1-12.7 -9.1-12.7-9.1-12.7S209.9 166.3 213.8 166.3z"/>
+    <path class="twinkle twinkle--3" fill="#fff" d="M131.4 27.6c1.7 0 5.7-4.1 5.7-4.1s-4.1 3.9-4.1 5.7c0 1.7 4.1 5.7 4.1 5.7s-3.9-4.1-5.7-4.1 -5.7 4.1-5.7 4.1 4.1-3.9 4.1-5.7c0-1.7-4.1-5.7-4.1-5.7S129.7 27.6 131.4 27.6z"/>
+    <g id="spaceship-and-flame">
+        <g id="group-flame" style="filter: url(#flame)">
+            <path id="flame-outer" fill="url(#gradientFlameOuter)" transform="translate(-2,-2)" d="M94.4 192.3c-4.8 4.8-16.4 12.1-30.9 11.6 6.8-9.9-15.5 2.2-15.5 2.2 0 0-2.2-33.5 13.8-46.4 9.4-7.6 22.8-8.2 31.8 0.8C102.6 169.5 102.9 183.7 94.4 192.3z"/>
+            <path id="flame-inner" fill="url(#gradientFlameInner)" transform="translate(-2,-2)" d="M93 184c-2.8 7.7-11.3 10.1-20.8 11 4.3-11.3-9.9 2.9-18.5 1.7 9.7-10.5 0-19.5 13-32.5 6-6 16.1-5.8 22.4 0.6C95.5 171.2 95.5 177.2 93 184z"/>
+        </g>
+        <g id="spaceship" filter="url(#dropShadow)">
+            <polygon id="rocket-engine" fill="url(#gradientMetal)" points="104.5 186 68 149.5 76.2 144.5 109.5 177.8 "/>
+            <path id="wing-right" fill="url(#gradientWings)" d="M112.4 177.5c17.6 30.5-1.4 62.4-4.5 75.5 32.4-19.9 69.6-51 73.2-58.5 2.7-5.6-0.7-30.8-7.8-48.9C153.6 164.1 131.7 175.4 112.4 177.5z"/>
+            <path id="wing-left" fill="url(#gradientWings)" d="M108.5 80.6c-18.1-7-43.4-10.5-48.9-7.8C52 76.5 20.9 113.6 1 146c13.1-3.1 44.9-22.1 75.5-4.5C78.6 122.3 89.9 100.4 108.5 80.6z"/>
+            <use href="#hull" fill="#ccc"/>
+            <use href="#hull" fill="#FFF" filter="url(#insetShadow)"/>
+            <circle id="window-frame" fill="url(#gradientMetal)" cx="179" cy="75" r="18"/>
+            <circle id="window" fill="url(#gradientWindow)" cx="179" cy="75" r="14"/>
+        </g>
+    </g>
 
-Tim Aplikasi Diskominfo SP Kota Surakarta adalah unit yang bertanggung jawab dalam pengembangan, pengelolaan, dan pemeliharaan sistem informasi serta aplikasi digital untuk mendukung transformasi digital pemerintahan dan pelayanan publik di Kota Surakarta.
-
-## 💼 Bidang Kerja Kami
-
-- 🖥️ **Pengembangan Aplikasi** - Membangun solusi digital untuk layanan pemerintahan dan masyarakat
-- 🔧 **Maintenance Sistem** - Pemeliharaan dan peningkatan sistem informasi yang ada
-- 🔐 **Keamanan Informasi** - Menjaga integritas dan keamanan data pemerintahan
-- 📊 **Integrasi Data** - Mengintegrasikan berbagai sistem untuk efisiensi layanan
-- 🎓 **Capacity Building** - Peningkatan kapasitas SDM di bidang teknologi informasi
-
-## 🚀 Teknologi yang Kami Gunakan
-
-```
-Frontend:  React, Vue.js, Next.js, Tailwind CSS
-Backend:   PHP, Laravel, Node.js, Python
-Database:  MySQL, PostgreSQL, MongoDB
-Mobile:    Flutter, React Native
-DevOps:    Docker, Git, CI/CD
-Cloud:     AWS, Google Cloud Platform
-```
-
-## 📂 Aplikasi & Layanan Utama
-
-Berikut beberapa sistem dan aplikasi yang kami kelola:
-
-- 📱 **Portal Resmi Kota Surakarta** - Pusat informasi dan layanan digital
-- 🏢 **Sistem Informasi Manajemen** - Pengelolaan administrasi pemerintahan
-- 👥 **Aplikasi Pelayanan Publik** - Mempermudah akses masyarakat ke layanan pemerintah
-- 📊 **Dashboard Analytics** - Monitoring dan analisis data kota
-- 🔐 **Sistem Persandian** - Keamanan komunikasi dan data
-
-## 🤝 Kolaborasi
-
-Kami terbuka untuk kolaborasi dalam:
-
-- Open source projects untuk pemerintahan
-- Inovasi teknologi pelayanan publik
-- Knowledge sharing dengan daerah lain
-- Program magang dan pengembangan SDM
-
-## 📞 Hubungi Kami
-
-- 🌐 **Website**: [surakarta.go.id](https://surakarta.go.id)
-- 📧 **Email**: diskominfo@surakarta.go.id
-- 📍 **Alamat**: Kota Surakarta, Jawa Tengah
-<!-- - 📱 **Social Media**: [@InfoSurakarta](https://twitter.com/InfoSurakarta) -->
-
-## 🌟 Visi Kami
-
-> "Mewujudkan Surakarta sebagai Smart City yang Inovatif, Inklusif, dan Berkelanjutan melalui Pemanfaatan Teknologi Informasi dan Komunikasi"
-
-## 📜 Lisensi & Ketentuan
-
-Proyek-proyek yang kami publikasikan mengikuti ketentuan lisensi yang tertera pada masing-masing repository. Untuk penggunaan dan kontribusi, silakan merujuk pada dokumentasi di setiap project.
-
----
-
-<div align="center">
-
-**🏙️ Membangun Surakarta Digital Bersama 🏙️**
-
-_Dibuat dengan ❤️ oleh Tim Aplikasi Diskominfo SP Kota Surakarta_
-
-</div>
+</svg>
